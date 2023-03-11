@@ -6,7 +6,7 @@ stages {
      stage('Build Application'){
           steps{
           
-                  bat 'mvn  install'
+                  bat 'mvn clean install -U'
         }
      }
  
