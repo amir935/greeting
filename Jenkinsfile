@@ -3,12 +3,13 @@ pipeline
 agent any
 
 stages {
-     stage('Build Application'){
-          steps{
+     stage('Build') {
+      steps {
+        withCredentials([usernamePassword(credentialsId: 'd297e15f-eaa9-4c90-847a-c3c82a1d1bd2', usernameVariable: 'Amir122306', passwordVariable: 'Amir122306')]) {
+          bat  mvn -B clean install
           
-                  bat 'mvn clean install -U'
         }
-     }
+      }
  
      stage('test  application'){
           steps{
