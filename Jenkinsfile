@@ -6,7 +6,7 @@ stages {
      stage('Build Application'){
           steps{
           
-                  bat 'mvn clean install -Dusername=$ANYPOINT_USERNAME -Dpassword=$ANYPOINT_PASSWORD'
+                  bat 'mvn  install'
         }
      }
  
